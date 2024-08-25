@@ -4,14 +4,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        ContaTerminal conta = new ContaTerminal("", 3.01, "", 0);
 
         System.out.println("Seja bem-vindo cliente novo, realize o seu cadastro:\n");
 
-        String nome = "";
-        Double saldo = 0.0;
-        String agencia = "";
-        int numero = 0;
+        String nome;
+        double saldo ;
+        String agencia ;
+        int numero ;
 
         while (true) {
             System.out.print("Nome: ");
@@ -73,7 +72,7 @@ public class Main {
             }
         }
 
-        conta = new ContaTerminal(nome, saldo, agencia, numero);
+        ContaTerminal conta = new ContaTerminal(nome, saldo, agencia, numero);
 
         System.out.println("\nCadastro realizado com sucesso!");
         System.out.println("Nome: " + conta.getNome());
